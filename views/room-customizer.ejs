@@ -1,0 +1,271 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Create your room</title>
+        <style>
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #96cce0; padding-top: 60px; text-align: center; }
+
+        input.formInput {
+            min-width:10px!important;
+            border-width:0px;
+            border:none;
+            white-space: nowrap;
+            overflow: visible;
+            text-align: left; 
+        }
+
+        input.formInputFileHolder {
+            cursor: pointer;
+        }
+
+        textarea:focus, input:focus{
+            outline: none;
+        }
+
+        .param { 
+            cursor: default;
+            text-align: left; 
+            display: inline-block; 
+        }
+
+        .hidden { 
+            display: none; 
+        }
+
+        u {
+            cursor: default;
+            border-bottom: 1px dotted #000;
+            text-decoration: none;
+        }
+
+        .room-customizer-div {
+            min-width:400px!important;
+            background: white; 
+            position: absolute;
+            width: auto;
+            height: auto;
+            top : 10px;
+            left : 10px;
+            padding: 10px;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: height 0.5s;
+        }
+
+        .room-customizer-scroll-div {
+            text-align: left; 
+            display : block; 
+            height: calc(100%);
+            margin: 0 auto; 
+            overflow-y: auto;
+        }
+
+        .user-customizer-div {
+            background: white; 
+            position: absolute;
+            width: auto;
+            height: auto;
+            top : 10px;
+            left : 10px;
+            padding: 10px;
+            overflow: hidden;
+            border-color:#000000;
+            border-style:solid;
+            border-width:1px;
+            border-radius: 8px;
+            transition: height 0.5s;
+        }
+
+        .user-customizer-scroll-div {
+            text-align: left; 
+            display : block; 
+            height: calc(100%);
+            margin: 0 auto; 
+            overflow-y: auto;
+        }
+
+        </style>
+</head>
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="app-room-customizer/app.js"></script>
+
+    <div id="room-customizer" class="room-customizer-div">
+
+        <div id="room-customizer-view" class="room-customizer-scroll-div">
+
+            <form id = "form" autocomplete="off">
+
+                <div style="padding: 30px;">
+
+                    <div align="left" style="display: block; vertical-align: top; margin-bottom: 15px;">
+
+                        <select id="room-select" onchange="RoomCustomizer.LoadRoom(this)">
+                            <option value="new" selected>New</option>
+                        </select>
+                    </div>
+
+                    <div align="left" style="display: inline-block; vertical-align: top; text-align: left; "/>
+
+                        <span  class="param">Room name:</span>
+                        <u><input class="formInput" name="roomName" placeholder="New room" ></input></u>
+                        <br/><br/>
+
+                        <span  class="param">Push camera back by:</span>
+                        <u><input class="formInput" name="pushCameraBackBy" placeholder="0"></input></u>
+                        <br/>
+
+                        <span  class="param">Object scale:</span>
+                        <u><input class="formInput" name="objectScale" placeholder="1"></input></u>
+                        <br/><br/>
+
+                        <span class="param">Floor bounds</span>
+                        <br/>
+
+                        <span  class="param">&#8211; width:</span>
+                        <u><input class="formInput" name="floorWidth" placeholder="1000"></input></u>
+                        <br/>
+
+                        <span  class="param">&#8211; depth:</span>
+                        <u><input class="formInput" name="floorDepth" placeholder="150"></input></u>
+                        <br/>
+
+                        <span  class="param">&#8211; tiling:</span>
+                        <u><input class="formInput" name="floorTiling" placeholder="3"></input></u>
+                        <br />
+
+                        <span  class="param">&#8211; texture:</span>
+                        <u><input name="floorTexture"
+                                  class="formInput formInputFileHolder" 
+                                  placeholder="upload texture" 
+                                  readonly="true"
+                                  onclick="RoomCustomizer.Upload(this, 'floorTextureHolder');">
+                            </input></u>
+                        <input name="floorTextureHolder" type="file" style="display: none;">
+                        <br/><br/>
+
+                        <span class="param">Room has ceiling </span><span class="input">
+                            <input name="ceiling" 
+                                   type="checkbox"
+                                   style="height:15px;" 
+                                   onclick="document.getElementById('ceilingBlock').classList.toggle('hidden')">
+                            </input>
+                        </span><br />
+
+                        <span id="ceilingBlock" class="hidden">
+
+                            <span  class="param">&#8211; width:</span>
+                            <u><input class="formInput" name="ceilingWidth" placeholder="1000"></input></u>
+                            <br />
+
+                            <span  class="param">&#8211; depth:</span>
+                            <u><input class="formInput" name="ceilingDepth" placeholder="150"></input></u>
+                            <br />
+
+                            <span  class="param">&#8211; tiling:</span>
+                            <u><input class="formInput" name="ceilingTiling" placeholder="3"></input></u>
+                            <br />
+
+                            <span  class="param">&#8211; texture:</span>
+                            <u><input name="ceilingTexture"
+                                      class="formInput formInputFileHolder" 
+                                      placeholder="upload texture" 
+                                      readonly="true"
+                                      onclick="RoomCustomizer.Upload(this, 'ceilingTextureHolder');">
+                            </input></u>
+                            <input name="ceilingTextureHolder" type="file" style="display: none;"/>
+                            <br />
+
+                            <span  class="param">&#8211; height:</span>
+                            <u><input class="formInput" name="ceilingHeight" placeholder="25"></input></u>
+                            <br />
+
+                        </span>
+
+                    </div>
+
+                     <div align="right" style="display: inline-block; vertical-align: top; text-align:left; float: right;">
+
+                        <span class="param">Room id:</span>
+                        <br/>
+                        <u><span id="room-id" class="param">-new-</span></u>
+                        <br/><br/>
+
+                        <span class="param">Room creator:</span>
+                        <br/>
+                        <u><span id="room-creator"><%= name %></span></u>
+                        <br/><br/>
+
+                        <span class="param">Room owners:</span>
+                        <br/>
+                        <div id='room-owners' style="cursor: pointer;" onclick="RoomCustomizer.ChangeRoomOwners(this);">
+                            <u><span style="cursor: pointer;"><%= name %></span></u>
+                        </div>
+                        <br/><br/>
+
+                     </div>
+
+                    <br/><br/>
+
+                    <div align="center" style="display: block; vertical-align: bottom;">
+
+                        <input  id="room-save-btn"
+                                style="border: 1px solid #939393;
+                                      padding: 10px;
+                                      border-radius: 8px;
+                                      height: 40px;
+                                      background: white;" 
+                                type="submit" value="Create">
+                        </input>
+
+                        <br/><br/>
+                        <span id="form-result" align="center" style="display: none; vertical-align: bottom;"">Result</span>
+ 
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="user-customizer" class="user-customizer-div" style="display: none; position: absolute; ">
+        <div id="user-customizer-view" class="user-customizer-scroll-div">
+
+            <div id="user-customizer-listview" >
+            </div>
+
+            <br/>
+
+            <div align="center" style="display: block; vertical-align: bottom;">
+                <input  id="room-save-btn"
+                        style="border: 1px solid #939393;
+                              padding: 5px;
+                              border-radius: 8px;
+                              height: 30px;
+                              background: white;" 
+                        type="button"
+                        value="Close"
+                        onclick="$('#user-customizer').hide();">
+                </input>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.params = {
+            user_id : <%= user_id %>,
+            name : '<%= name %>',
+            avatar : '<%= avatar %>'
+        };
+        main();
+    </script>
+    
+
+    </body>
+</html>
+

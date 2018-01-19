@@ -1,0 +1,9 @@
+
+mixin mixin_menu_detail( detail )
+
+  //- var name = /([^-]+)/.exec( detail.name )[1]
+  //- var file = /([^-]+(\..+))/.exec( detail.file )[1]
+
+  a.red.item( type=detail.type, file=detail.file )
+    = detail.type
+    img( src = detail.relative )

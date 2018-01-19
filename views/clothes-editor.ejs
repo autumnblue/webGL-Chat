@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clothes Editor</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/clothes-editor/libs.js"></script>
+    <link rel="stylesheet" href="/clothes-editor/libs.css" type="text/css" />
+    <style>
+        #avatar-menu select {
+            margin-top: 4%;
+        }
+    </style>
+</head>
+<body>
+<div class="row no-gutters">
+    <div class="col-12 col-sm-6 col-md-8" id="view"></div>
+    <div class="col-4 col-md-2"><label for="avatars">Select list (select one):</label>
+        <select class="form-control" id="avatars">
+        </select>
+        <div id="avatar-menu"></div>
+    </div>
+</div>
+</body>
+<script src="/clothes-editor/app.js"></script>
+</html>

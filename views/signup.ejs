@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Sign Up</title>
+        <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #96cce0; padding-top: 60px; text-align: center; }
+input { border: 1px solid #939393; padding: 10px; border-radius: 8px; height: 50px; }
+</style>
+</head>
+    <body>
+        <form action="signup" method="POST" onsubmit="return validate();">
+
+            <div style="text-align: left; display: inline-block;">
+                Your Name : <input style="margin-left: 40px;" name="name"  value="aj" /><br />
+                Password : <input style="margin-left: 52px;" name="password" type="password" value="t3rMin8r" /><br />
+                <br/><br/>
+            </div>
+            <div>
+                <%= message %>
+            </div>
+
+            <div style="background: white; width: 100%; margin: 50px 0 50px 0; padding: 50px;">
+                &nbsp;
+            </div>
+
+            <div>
+                <input type="submit" value="Sign Up"/>
+            </div>
+
+        </form>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script>
+            $ ("img").click (function () {
+                var index = Array.prototype.slice.apply ($ ("img")).indexOf (this);
+                $ ("[type=radio]")[index].checked = true;
+            });
+
+            function validate () {
+                if (/^\s*$/.test ($ ("input")[0].value)) {
+                    alert ("Please enter your name.")
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>
+

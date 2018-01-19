@@ -1,0 +1,7 @@
+
+include menu.jade
+
+.ui.horizontal.labeled.icon.menu.fluid.menu-detail-type.layout-invisible
+
+  each detail,i in details
+    +mixin_menu_detail( detail,i )

@@ -1,0 +1,13 @@
+
+mixin mixin_menu_component( component )
+
+  a.item
+    img( src = component.relative )
+    = component.name
+
+//
+
+.ui.vertical.labeled.icon.menu
+
+  each component,i in components
+    +mixin_menu_component( component,i )

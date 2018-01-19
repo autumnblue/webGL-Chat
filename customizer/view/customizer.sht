@@ -1,0 +1,67 @@
+//include viewer.jade
+
+doctype html
+html( lang='en' )
+  head
+
+    title Customizer
+    meta( charset='utf-8' )
+
+    // icons
+    link( href='favicon.ico', rel='shortcut icon' )
+    meta( content='bigicon.jpg', property='og:image' )
+
+    // predefined
+    meta( content='Virtual Reality', name='description' )
+    meta( content='width=device-width, height=device-height, initial-scale=1, maximum-scale=1', name='viewport' )
+
+    // style
+    
+    link( href="/viewer/style/ahead/ahead.less", rel="stylesheet", type="text/less" )
+    link( href="/viewer/style/ahead/basic.less", rel="stylesheet", type="text/less" )
+    link( href="/viewer/style/common/addon.less", rel="stylesheet", type="text/less" )
+    link( href="/viewer/style/common/common.less", rel="stylesheet", type="text/less" )
+    link( href="/viewer/style/common/layout.less", rel="stylesheet", type="text/less" )
+    link( href="/viewer/style/common/lib.less", rel="stylesheet", type="text/less" )
+    link( href="/viewer/style/common/semantic.css", rel="stylesheet", type="text/css" )
+    link( href="/viewer/style/common/stats.less", rel="stylesheet", type="text/less" )
+    link( href="/customizer.post/customizer.less", rel="stylesheet", type="text/less" )
+    
+    // style
+
+    // script
+    
+    script( src="/viewer/script/common.external/Buzz.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/Hammer.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/Jade.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/Jquery-2.0.3.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/Less.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/LessConfig.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/Mousetrap.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/Numeric.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/Tween.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/Underscore.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/jquery/Jquery.address.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/jquery/Jquery.animate-colors.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/jquery/Jquery.colpick.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/jquery/Jquery.fileDownload.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/jquery/Jquery.jscrollpane.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/jquery/Jquery.mousewheel.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/jquery/Jquery.specialevent.hammer.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/jquery/Jquery.tablesort.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/jquery/Jquery.taphold.js" type="text/javascript" )
+    script( src="/viewer/script/common.external/semantic/Semantic.js" type="text/javascript" )
+    script( src="/viewer/script/auto/version.js" type="text/javascript" )
+    script( src="/viewer/script/core/Wtools.js" type="text/javascript" )
+    script( src="/viewer/script/core/printer/Printer.js" type="text/javascript" )
+    script( src="/viewer/script/core/printer/logger/Logger.js" type="text/javascript" )
+    script( src="/viewer/script/core/wtools/Path.js" type="text/javascript" )
+    script( src="/viewer/script/sound/Music.js" type="text/javascript" )
+    script( src="/viewer/script/sound/Playlist.js" type="text/javascript" )
+    script( src="/customizer.post/customizer.js" type="text/javascript" )
+    script( src="/customizer.post/view/formPost.js" type="text/javascript" )
+    
+    // script
+
+  body.viewer
+    include ./customizer.post/view/body.jade

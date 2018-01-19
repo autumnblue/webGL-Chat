@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+/* high level */
+
+.layout.fixed
+{
+
+	position: fixed;
+	overflow: visible;
+	width: 100%;
+	height: auto;
+	z-index: 1;
+
+	text-align: center;
+
+}
+
+.layout.fixed.top
+{
+
+	.layout.fixed;
+
+	background: rgba( 222,222,222,0.0 );
+
+	//border-width: 1;
+	//border-style: solid; /*none || hidden || dotted || dashed || solid || double || groove || ridge || inset || outset */
+	//border-color: #415365;
+	//border-color: rgba( 0,0,0,0 );
+	//border-collapse: collapse; /* collapse || separate */
+	//box-shadow: 0px 0px 15px 0px #111315; /* 10px 10px 5px 0px #eeeeee */
+
+}
+
+.layout.cover.mid
+{
+
+	z-index: 0;
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+
+}
+
+.layout.fixed.bottom
+{
+
+	.layout.fixed;
+
+	bottom: 0px;
+
+}
+
+/* mid level */
+
+.layout.surfaces
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	overflow: visible;
+	background-color: transparent;
+
+	.surface
+	{
+
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0.15%;
+
+		canvas
+		{
+			width: 100%;
+			height: 100%;
+		}
+
+	}
+
+}
+
+/* warning */
+
+.layout.warning
+{
+
+	margin: 1em auto;
+	padding: 0.5em 1em;
+	position: fixed;
+	display: none;
+
+	z-index: -1;
+	font-size: 200%;
+	background: none repeat scroll 0 0 #906000;
+	border-radius: 1em;
+	opacity: 0.4;
+	bottom: 50%;
+	//top: 1em;
+	box-shadow: 0 0 1em #906000;
+	color: #FFFFFF;
+	left: 0;
+	right: 0;
+	text-align: center;
+	width: 50%;
+	//height: 100px;
+
+}
+
+/* loading */
+
+.layout.loading
+{
+
+	font-size: 40px;
+	color: rgba( 244,244,244,0.95 );
+	text-shadow: 0px 0px 5px #000000;
+	position: absolute;
+	top: 30%;
+	left: 0;
+	right: 0;
+	height: auto;
+	z-index: 10;
+
+}
+
+/* info */
+
+.layout.info
+{
+
+	position: absolute;
+	width: 20%;
+	height: 5%;
+	left: 1%;
+	top: 2%;
+	z-index: 10;
+
+	color: #ffffff !important;
+	text-shadow: 0px 0px 2px #000000;
+	text-align: left;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 8px;
+	font-weight: bold;
+	line-height: 15px;
+	white-space: pre;
+
+}
+
+/* horizontal scrollable menu */
+
+.layout.horizontal-scrollable-menu
+{
+	white-space: nowrap;
+	overflow-y: hidden;
+	overflow-x: auto;
+	overflow: auto;
+	background: rgba( 255,255,255,1 );
+
+	& > div
+	{
+		box-shadow: 0 0 0 0 transparent;
+		background: transparent;
+	}
+
+	& > div > .item
+	{
+		//display: block;
+		//float: left;
+		//clear: none;
+	}
+
+}

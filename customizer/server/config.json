@@ -1,0 +1,22 @@
+{
+
+  "debug" : 1,
+
+  "dbAddress" :
+  {
+
+    "url" : "mongodb://127.0.0.1:27017/printing",
+
+    "server" : "127.0.0.1",
+    "port" : 27017,
+    "db" : "printing",
+
+    "user" : "bobby",
+    "password" : "MongoMongo27017",
+
+    "collectionMaterials" : "materials",
+    "collectionPrinters" : "printers"
+
+  }
+
+}

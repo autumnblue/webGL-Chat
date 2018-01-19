@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+    <title>Welcome!</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #96cce0; padding-top: 60px; text-align: center; }
+        input { border: 1px solid #939393; padding: 10px; border-radius: 8px; height: 50px; }
+    </style>
+</head>
+    <body>
+
+        <form action="login" method="POST" onsubmit="return validate();">
+
+            <div style="text-align: left; display: inline-block;">
+                Your Name : <input style="margin-left: 40px;" name="name"  value="aj" /><br />
+                Password : <input style="margin-left: 52px;" name="password" type="password" value="t3rMin8r" /><br />
+                <br/><br/>
+                <div>
+                    <%= message %>
+                </div>
+                Debug options: <br/>
+                    <input style="margin-left: 40px; height: initial;" type="radio" name="debug_aa" value="none" checked="checked"> Disabled<br/>
+                    <input style="margin-left: 40px; height: initial;" type="radio" name="debug_aa" value="default"> Default<br/>
+                    <input style="margin-left: 40px; height: initial;" type="radio" name="debug_aa" value="ssaa"> SSAA<br/>
+                    <input style="margin-left: 40px; height: initial;" type="radio" name="debug_aa" value="smaa"> SMAA<br/>
+                    <input style="margin-left: 40px; height: initial;" type="radio" name="debug_aa" value="fxaa"> FXAA<br/>
+                    <input style="margin-left: 40px; height: initial;" type="radio" name="debug_aa" value="bokeh"> Bokeh<br/>
+                <br/><br/>
+            </div>
+
+            <div>
+                <a href="signup">Sing up</a><br/><br/>
+                Enter Room Customizer <input type="checkbox" name="enter_room_customizer" style="height: initial;" /><br/><br/>
+                <input type="submit" value="Login"></input>
+            </div>
+
+        </form>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <script>
+            function validate () {
+                if (/^\s*$/.test ($ ("input")[0].value)) {
+                    alert ("Please enter your name.")
+                    return false;
+                }
+                return true;
+            }
+        </script>
+
+    </body>
+</html>
+

@@ -1,0 +1,239 @@
+@charset "UTF-8";
+@import "/viewer/style/common/lib.less";
+@import "/viewer/style/common/common.less";
+@import "/viewer/style/common/layout.less";
+
+/* high level */
+
+.panel.top
+{
+	.layout.fixed.top();
+}
+
+.panel.mid
+{
+	.layout.cover.mid;
+
+	position: relative;
+	max-width: 1000px;
+	margin: auto;
+	padding: 0 10em;
+	padding-bottom: 18em;
+
+}
+
+.panel.bottom
+{
+	.layout.fixed.bottom;
+}
+
+.viewer:before
+{
+
+	content: "";
+	position: fixed;
+	z-index: -1;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	width: 100%;
+	height: 100%;
+
+	background: rgb(253,255,255);
+	background: radial-gradient(ellipse at center,  rgba(54,144,220,1) 0%, rgba(54,144,220,1) 50%,rgba(39,59,115,1) 100%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.8;
+
+}
+
+/* mid level */
+
+.panel.loading
+{
+	.layout.loading;
+}
+
+/* arrows */
+
+.arrows
+{
+	position: absolute;
+	top: 7em;
+	z-index: 10;
+}
+
+.arrows.left
+{
+	left: 3em;
+}
+
+.arrows.right
+{
+	right: 3em;
+}
+
+/* customizer */
+
+.customizer.panel
+{
+
+	width: 100%;
+	height: 100%;
+
+	/* menu */
+
+	& > .menu.vertical
+	{
+		float: right;
+		margin: 15px !important;
+	}
+
+	& > .menu.vertical
+	{
+		position: absolute;
+		left: 0;
+	}
+
+	& > .menu.horizontal .item
+	{
+		min-width: 80px;
+	}
+
+	.menu img
+	{
+		padding: 8px !important;
+	}
+
+	.menu .item
+	{
+		text-transform: capitalize;
+	}
+
+	/* submenu details */
+
+	.menu-detail-pick
+	{
+		//position: relative;
+		//max-height: 5em;
+		height: 7.5em;
+		//width: 100%;
+	}
+
+	.menu-detail-pick > div
+	{
+	}
+
+	.menu-detail-pick .item
+	{
+		padding: 0.5em;
+		height: 6.5em;
+	}
+
+	.menu-detail-pick .item > img
+	{
+		//min-height: 50px;
+		max-height: 66px;
+	}
+
+	/* page */
+
+	.page
+	{
+		min-height: 250px;
+		margin-bottom: 2em;
+		padding: 2em 0;
+		height: 100%;
+		width: 100%;
+	}
+
+	.page.sex > .segment,
+	.page.character > .segment,
+	.page.details > .segment
+	{
+
+		//float: right;
+		//margin: 15px !important;
+		margin: 0 !important;
+		width: 100%;
+		height: 100%;
+		padding: 1em;
+		padding: 0;
+	}
+
+	.page.sex > .segment
+	{
+		//padding: 15%;
+	}
+
+	/* pickable */
+
+	.pickable
+	{
+		float: left;
+		width: 100%;
+		height: 100%;
+	}
+
+	.pickable.sex
+	{
+		width: 50%;
+	}
+
+	.pickable:hover
+	{
+		background-color: #eeeeee;
+		box-shadow: 0px 0px 5px #888888;
+		cursor: pointer;
+	}
+
+	/* image */
+
+	.image
+	{
+		float: left;
+		width: 60%;
+		height: 60%;
+		margin: 20%;
+	}
+
+	.image.sex
+	{
+		float: left;
+		width: 40%;
+		height: 40%;
+		margin: 30%;
+	}
+
+	@media( max-height: 500px )
+	{
+
+		.image.image
+		{
+			float: left;
+			width: 90%;
+			height: 90%;
+			margin: 1em;
+		}
+
+	}
+
+	.image.male
+	{
+		.layout-image( url( "/viewer/image/male.png" ) );
+	}
+
+	.image.female
+	{
+		.layout-image( url( "/viewer/image/female.png" ) );
+	}
+
+	.image.details
+	{
+		width: 50%;
+		height: 90%;
+		margin: 1em auto;
+	}
+
+}

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import "/viewer/style/common/lib.less";
+
+/* blue */
+
+.ui.blue.buttons .button, .ui.blue.button {
+	background-color: #3b83c0 !important;
+}
+
+/* yellow */
+
+.ui.yellow.buttons .button,
+.ui.yellow.button {
+  background-color: #CDCD32;
+  color: #FFFFFF;
+}
+.ui.yellow.buttons .button:hover,
+.ui.yellow.button:hover,
+.ui.yellow.buttons .active.button,
+.ui.yellow.button.active {
+  background-color: #DBDB33;
+  color: #FFFFFF;
+}
+.ui.yellow.buttons .button:active,
+.ui.yellow.button:active {
+  background-color: #C1C124;
+  color: #FFFFFF;
+}
+.ui.menu .yellow.active.item,
+.ui.yellow.menu .active.item {
+  border-color: #C1C124 !important;
+  color: #C1C124 !important;
+}
+
+/* silver */
+
+i.ui.silver
+{
+	color: #aaaaaa;
+}
+
+.ui.popup
+{
+	z-index: 10000 !important;
+}
+
+/* dimmer fix */
+
+.ui.dimmed.dimmable > .ui.animating.dimmer,
+.ui.dimmed.dimmable > .ui.visible.dimmer, .ui.active.dimmer {
+
+	//position: fixed;
+
+}
+
+/* table */
+
+.ui.table.smooth
+{
+
+	//tbody tr:nth-child( 2n )
+	//{
+		//background: transparent;
+	//}
+
+	tbody tr:nth-child( 2n )
+	{
+		background: transparent !important;
+		td
+		{
+			background: rgba(0, 55, 55, 0.03) !important;
+		}
+		td:first-child
+		{
+			background: linear-gradient( to right, rgba(0, 55, 55, 0) 0%, rgba(0, 55, 55, 0) 5%, rgba(0, 55, 55, 0.03) 20% ) !important;
+		}
+		td:last-child
+		{
+			background: linear-gradient( to left, rgba(0, 55, 55, 0) 0%, rgba(0, 55, 55, 0) 5%, rgba(0, 55, 55, 0.03) 20% ) !important;
+		}
+
+	}
+
+	tbody td
+	{
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+
+}

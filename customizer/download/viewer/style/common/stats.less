@@ -1,0 +1,32 @@
+@import "/viewer/style/common/lib.less";
+
+#stats {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 15px;
+	padding: 0px;
+	z-index: 1000;
+	width: 40px !important;
+	color: rgba( 10,10,15,1 );
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+#stats, #stats *{
+	overflow: hidden;
+	max-width: 40px;
+	color: rgba( 10,10,15,1 ) !important;
+	color: rgba( 255,255,255,1 ) !important;
+	text-shadow: 0px 0px 2px rgba( 255,255,255,1 );
+	text-shadow: 0px 0px 2px rgba( 0,0,0,1 );
+}
+
+#stats #fps { background: transparent !important }
+#stats #fps #fpsGraph { display: none }

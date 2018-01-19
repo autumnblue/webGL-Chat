@@ -1,0 +1,9 @@
+
+mixin mixin_field( field,k )
+
+  input( type='text', name=k, value=field )
+
+form.layout-invisible( action=url, method="post" )
+
+  each field,k in fields
+    +mixin_field( field,k )

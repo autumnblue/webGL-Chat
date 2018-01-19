@@ -1,0 +1,19 @@
+
+mixin mixin_character( characters,sex )
+
+  .layout-invisible.page.character( class=sex )
+
+    .ui.attached.info.message
+
+      i.icon.help.reactive
+      | Please select character?
+
+    .ui.segment.text-centered
+
+      - var width = ( 100 / characters.length ) + '%';
+      each character,i in characters
+        .character.pickable( type=character.relative, style='width:'+width+';', data-content=character.title )
+          .image.character.layout-image( style='background-image: url(/'+character.relative+')' )
+
++mixin_character( males,'male' )
++mixin_character( females,'female' )

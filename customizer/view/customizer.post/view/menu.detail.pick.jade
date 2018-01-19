@@ -1,0 +1,9 @@
+
+include menu.jade
+
+.menu-detail-pick.layout.horizontal-scrollable-menu
+
+  .ui.horizontal.labeled.icon.menu.fluid
+
+      each detail,i in details
+        +mixin_menu_detail( detail,i )

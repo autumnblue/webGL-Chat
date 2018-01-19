@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "devDependencies": {
+
+    "underscore":"",
+    "fs-extra": "",
+
+    "mongodb": "",
+    "jade": "",
+    "express": "4.x",
+    "express-params": "",
+    "morgan": "",
+    "qs":"",
+    "json-stringify-safe": "",
+    "request": "",
+    "busboy": "",
+
+    "gm": "~1.16.0"
+
+  },
+  "engine": "node >= 0.10.22"
+}

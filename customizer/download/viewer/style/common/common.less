@@ -1,0 +1,178 @@
+@charset "UTF-8";
+@import "/viewer/style/common/lib.less";
+
+/**/
+
+.select-off *:not( input )
+{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* shift */
+
+.shift.little.up{
+
+	position: relative;
+	top: -25px;
+	margin-bottom: -25px;
+
+}
+
+.shift.bottom.down{
+
+	position: relative;
+	top: -25px;
+	margin-bottom: -25px;
+
+}
+
+.shift.left{
+
+	position: relative;
+	left: -50px
+
+}
+
+.shift.right{
+
+	position: relative;
+	right: -50px
+
+}
+
+/* text */
+
+.pre{
+
+	white-space: pre;
+
+}
+
+.nowrap{
+
+	white-space: pre-line;
+
+}
+
+.sup{
+
+	vertical-align: super;
+	font-size: 0.7em;
+
+}
+
+
+.text.layout-centered.layout-centered.layout-centered
+.text.center,
+.text-centered
+{
+
+	text-align: center;
+
+}
+
+/* centered */
+
+.layout-centered.layout-centered.layout-centered,
+.centered,
+.central
+{
+
+	margin-left: auto;
+	margin-right: auto;
+	float: none !important;
+
+}
+
+/* visibility */
+
+.force-visible,
+.layout-visible
+{
+	display: block !important;
+}
+
+.force-invisible,
+.layout-invisible
+{
+	display: none !important;
+	width: 0;
+	height: 0;
+}
+
+/* reactive */
+
+.reactive.reactive.reactive.reactive.reactive
+{
+
+	cursor: pointer;
+	.transition( all,0.2s,ease-out );
+
+}
+
+.reactive.reactive.reactive.icon:hover{
+
+	color: #009FDA;
+
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5) !important;
+
+	//font-size: 2.3em;
+
+}
+
+.reactive.reactive.reactive.button:hover{
+
+	background-color: #009FDA;
+
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+
+}
+
+/* img */
+
+.img
+{
+
+	background-origin: content-box;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+}
+
+/* etc */
+
+.clear{
+
+	clear: both;
+
+}
+
+/**/
+
+.cover,
+.layout-cover
+{
+
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+
+}
+

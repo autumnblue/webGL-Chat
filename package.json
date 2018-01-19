@@ -1,0 +1,51 @@
+{
+  "name": "socket-chat-example",
+  "version": "0.0.1",
+  "description": "PostVerta Media chat app prototype",
+  "engines": {
+    "node": "x.x.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "grunt",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.9.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "x.x.x",
+    "express": "x.x.x",
+    "express-session": "^1.15.6",
+    "grunt": "x.x.x",
+    "grunt-closure-compiler": "x.x.x",
+    "grunt-contrib-concat": "x.x.x",
+    "grunt-contrib-copy": "x.x.x",
+    "grunt-contrib-jshint": "x.x.x",
+    "grunt-contrib-uglify": "x.x.x",
+    "grunt-contrib-clean": "x.x.x",
+    "jshint-stylish": "x.x.x",
+    "jsonfile": "^2.0.0",
+    "morgan": "^1.9.0",
+    "multer": "^1.2.1",
+    "mysql": "^2.15.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^1.0.6",
+    "xml2js": "x.x.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

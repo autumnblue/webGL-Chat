@@ -1,0 +1,34 @@
+{
+    "folders": {
+        "default" : 1,
+        "mario" : 2,
+        "pine" : 3
+    },
+
+    "lights": {
+        "56" : [
+            { "type": "point", "u": 0.155, "v": 0.705, "r": 5, "color": "0xFFFFFF", "intensity": 1 },
+            { "type": "point", "u": 0.375, "v": 0.664, "r": 5, "color": "0xFFFFFF", "intensity": 1 },
+            { "type": "point", "u": 0.640, "v": 0.738, "r": 5, "color": "0xFFFFFF", "intensity": 1 },
+            { "type": "point", "u": 0.840, "v": 0.689, "r": 5, "color": "0xFFFFFF", "intensity": 1 }
+        ]
+    },
+
+    "spritesheets": {
+        "123" : 5
+    },
+
+    "clouds": [
+        "default/75",
+        "default/76",
+        "default/77",
+        "default/78"
+    ],
+
+    "animations": [
+        "mario/2",
+        "mario/3"
+    ],
+
+    "blocksize": 128
+}
